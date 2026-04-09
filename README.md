@@ -12,7 +12,8 @@ It works specifically with the framework that the `linuxserver.io` images provid
 
 ### How to use it
 
-Put the script somewhere meaningful. (I used `/volume1/docker/arr_init_scripts`)
+Put [the script](./10-wait-for-port.sh) somewhere meaningful and make it executable by the container user you normally specify for those containers that need to use it. 
+(I put it in `/volume1/docker/arr_init_scripts`)
 
 Add the following to your `linuxserver.io`-based containers (Sonarr used in my example)
 
@@ -46,3 +47,5 @@ Now on startup of the container, you'll see the following:
 ```
 
 Once the host and port are responsive, the container startup will continue.
+
+Hope it helps you!
